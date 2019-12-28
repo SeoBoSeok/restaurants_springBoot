@@ -30,7 +30,8 @@ public class RestaurantControllerTests {
     public void detail() throws Exception {
         mvc.perform(get("/restaurants/1004")).andExpect(status().isOk())
                 .andExpect(content().string(containsString("\"id\":1004")))
-                .andExpect(content().string(containsString("\"name\":\"Bob zip\"")));
+                .andExpect(content().string(containsString("\"name\":\"미미 삼겹\"")))
+                .andExpect(content().string(containsString("\"information\":\"미미 삼겹 in 대전시 유성구 궁동 460\"")));
     }
 
     @Test
