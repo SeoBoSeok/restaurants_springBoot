@@ -1,6 +1,7 @@
 package co.kr.example.restaurant.interfaces;
 
 import co.kr.example.restaurant.domain.RestaurantRepository;
+import co.kr.example.restaurant.domain.RestaurantRepositoryImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ public class RestaurantControllerTests {
     @Autowired // Spring에서 자동으로 알아서 해준다
     private MockMvc mvc;
 
-    @SpyBean
+    @SpyBean(RestaurantRepositoryImpl.class)
     private RestaurantRepository restaurantRepository;
 
     @Test
